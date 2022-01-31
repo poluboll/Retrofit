@@ -24,7 +24,6 @@ private val onRickCliсked: (Rick)->Unit
 
     override fun onBindViewHolder(holder: RickViewHolder, position: Int) {
         holder.bind(getItem(position))
-
     }
 
     companion object {
@@ -37,5 +36,9 @@ private val onRickCliсked: (Rick)->Unit
                 return oldItem == newItem
             }
         }
+    }
+
+    override fun getItemId(position: Int): Long {
+        return super.getItemId(position)
     }
 }
