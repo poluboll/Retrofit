@@ -9,12 +9,12 @@ import retrofit2.http.Query
 
 interface RickApi {
     @GET("character")
-    fun getRick(
+    suspend fun getRick(
         @Query("pages") pages: Int
-    ): Call<RickList>
+    ): RickList
 
     @GET("character")
-    fun getRickInfo(
+   suspend fun getRickInfo(
         @Query("name") name: String
-    ): Call<RickListInfo>
+    ): RickListInfo
 }

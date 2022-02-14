@@ -11,7 +11,7 @@ object RickService {
     val rickApi by lazy(LazyThreadSafetyMode.NONE){
         retrofit.create<RickApi>()
     }
-    private fun provideRetrofit(): Retrofit {
+     fun provideRetrofit(): Retrofit {
         val client= OkHttpClient.Builder()
             .build()
         return Retrofit.Builder()
